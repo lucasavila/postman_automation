@@ -1,5 +1,9 @@
 #!/bin/bash
 
+WORKSPACE="/home/colon/src"
+
+cd $WORKSPACE
+
 cd token
 
 node index.js
