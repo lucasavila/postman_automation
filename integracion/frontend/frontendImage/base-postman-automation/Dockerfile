@@ -1,4 +1,4 @@
-FROM docker.dev.redbee.io/colon-base-cert
+FROM registry.dev.redbee.io/colon-base-cert
 RUN curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 RUN curl -sSL https://get.rvm.io | bash -s stable
 ENV PATH=$PATH:/usr/local/rvm/bin

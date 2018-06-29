@@ -4,12 +4,11 @@ token="";
 
 newman.run({
     collection: './PostmanToken.postman_collection.json',
-    environment: './PRODUCTION.postman_environment.json',
-    reporters: ['cli', 'teamcity']
+    environment: './PRODUCTION.postman_environment.json'
 }, process.exit)
 .on('request', function (err, args) {
 
-	token = args.response.stream.toString()
+	token = JSON.parse(args.response.stream.toString()).token
         
 	console.log(token)
 })

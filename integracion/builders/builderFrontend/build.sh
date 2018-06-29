@@ -13,5 +13,5 @@ docker stop "$NOMBRE_BUILDER"
 docker rm "$NOMBRE_BUILDER"
 docker rmi "$NOMBRE_BUILDER"
 
-docker build -t "docker.dev.redbee.io/$NOMBRE_BUILDER" .
-docker push "docker.dev.redbee.io/$NOMBRE_BUILDER"
+docker build -t "registry.dev.redbee.io/$NOMBRE_BUILDER" .
+docker push "registry.dev.redbee.io/$NOMBRE_BUILDER"

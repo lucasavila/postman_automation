@@ -14,9 +14,9 @@ rm -rf tests/node_modules/
 docker stop $NOMBRE_IMAGEN
 docker rm $NOMBRE_IMAGEN
 
-echo "docker rmi docker.dev.redbee.io/$NOMBRE_IMAGEN:$VERSION_NUMBER"
-docker rmi "docker.dev.redbee.io/$NOMBRE_IMAGEN:$VERSION_NUMBER"
+echo "docker rmi registry.dev.redbee.io/$NOMBRE_IMAGEN:$VERSION_NUMBER"
+docker rmi "registry.dev.redbee.io/$NOMBRE_IMAGEN:$VERSION_NUMBER"
 
-echo "docker build docker.dev.redbee.io/$NOMBRE_IMAGEN:$VERSION_NUMBER"
-docker build -t "docker.dev.redbee.io/$NOMBRE_IMAGEN:$VERSION_NUMBER" .
-docker push "docker.dev.redbee.io/$NOMBRE_IMAGEN:$VERSION_NUMBER"
+echo "docker build registry.dev.redbee.io/$NOMBRE_IMAGEN:$VERSION_NUMBER"
+docker build -t "registry.dev.redbee.io/$NOMBRE_IMAGEN:$VERSION_NUMBER" .
+docker push "registry.dev.redbee.io/$NOMBRE_IMAGEN:$VERSION_NUMBER"

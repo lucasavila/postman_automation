@@ -32,10 +32,10 @@ docker-compose -f $AMBIENTE_YML stop
 echo "Eliminando el compose anterior"
 docker-compose -f $AMBIENTE_YML rm -f
 echo "Eliminando las imagenes anteriores"
-docker rmi docker.dev.redbee.io/"$IMAGENES":$VERSION_NUMBER
+docker rmi registry.dev.redbee.io/"$IMAGENES":$VERSION_NUMBER
 
 echo "se hace pull de las imagenes $VERSION_NUMBER"
-docker pull docker.dev.redbee.io/"$IMAGENES":$VERSION_NUMBER
+docker pull registry.dev.redbee.io/"$IMAGENES":$VERSION_NUMBER
 echo "Levantando el compose"
 docker-compose -f $AMBIENTE_YML scale "$IMAGENES"=1
 

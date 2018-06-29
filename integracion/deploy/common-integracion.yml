@@ -1,5 +1,5 @@
 postman_automation:
-        image: docker.dev.redbee.io/postman_automation:latest
+        image: registry.dev.redbee.io/postman_automation:latest
         container_name: "postman_automation"
         ports:
             - "8098:3000"

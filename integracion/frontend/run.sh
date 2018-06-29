@@ -10,5 +10,5 @@ docker stop "$NOMBRE_BUILDER"
 docker rm "$NOMBRE_BUILDER"
 
 
-docker run --name "$NOMBRE_BUILDER" -v /var/run/docker.sock:/var/run/docker.sock -v "$PATH_JOB_WORKSPACE":/webapps/redbee/"$GIT_JOB_NAME"/ --entrypoint="/webapps/redbee/$GIT_JOB_NAME/integracion/frontend/buildFrontend.sh"  docker.dev.redbee.io/"$NOMBRE_BUILDER" $WORKSPACE_PATH
+docker run --name "$NOMBRE_BUILDER" -v /var/run/docker.sock:/var/run/docker.sock -v "$PATH_JOB_WORKSPACE":/webapps/redbee/"$GIT_JOB_NAME"/ --entrypoint="/webapps/redbee/$GIT_JOB_NAME/integracion/frontend/buildFrontend.sh"  registry.dev.redbee.io/"$NOMBRE_BUILDER" $WORKSPACE_PATH
 
