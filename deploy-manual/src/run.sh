@@ -18,6 +18,6 @@ cd ..
 
 cp environment.source PRODUCTION.postman_environment.json
 
-sed -i "s/{{tokenToReplace}}/$TOKEN/g" PRODUCTION.postman_environment.json
+sed -i "s/{{token}}/$TOKEN/g" PRODUCTION.postman_environment.json
 
 node index.js
