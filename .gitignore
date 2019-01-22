@@ -1,2 +1,5 @@
 node_modules/
 token/node_modules/
+package-lock.json
+token/package-lock.json
+token/token.properties

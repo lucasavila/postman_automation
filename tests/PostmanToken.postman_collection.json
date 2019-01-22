@@ -1,96 +1,99 @@
 {
-	"id": "11f8efb2-b145-4581-f64d-9590c983110b",
-	"name": "PostmanToken",
-	"description": "",
-	"order": [
-		"aaae90aa-bb35-aaeb-484c-5aa30b6493f2",
-		"525a2b0b-d63e-8f02-02ca-ce19acca233d"
-	],
-	"folders": [],
-	"folders_order": [],
-	"timestamp": 1528810832359,
-	"owner": 0,
-	"public": false,
-	"requests": [
+	"info": {
+		"_postman_id": "930db017-7df8-47fd-942d-19c872753549",
+		"name": "PostmanToken",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
 		{
-			"id": "525a2b0b-d63e-8f02-02ca-ce19acca233d",
-			"headers": "Authorization: Basic YnJvd3NlckNsaWVudElkUGFzc3dvcmQ6c2VjcmV0\nContent-Type: application/x-www-form-urlencoded\n",
-			"headerData": [
+			"name": "https://septest.colonseguros.com.ar/ov_consultas/api/login/token",
+			"event": [
 				{
-					"key": "Authorization",
-					"value": "Basic YnJvd3NlckNsaWVudElkUGFzc3dvcmQ6c2VjcmV0",
-					"description": "",
-					"enabled": true
+					"listen": "test",
+					"script": {
+						"id": "326be671-213f-4668-83e3-975b9184f86f",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"error\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YnJvd3NlckNsaWVudElkUGFzc3dvcmQ6c2VjcmV0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"username\":\"colon\",\n\"password\":\"Colon2019\"\n}"
 				},
-				{
-					"key": "Content-Type",
-					"value": "application/x-www-form-urlencoded",
-					"description": "",
-					"enabled": true
+				"url": {
+					"raw": "https://septest.colonseguros.com.ar/ov_consultas/api/login/token",
+					"protocol": "https",
+					"host": [
+						"septest",
+						"colonseguros",
+						"com",
+						"ar"
+					],
+					"path": [
+						"ov_consultas",
+						"api",
+						"login",
+						"token"
+					]
 				}
-			],
-			"url": "https://septest.colonseguros.com.ar/oauth2/oauth/check_token?token={{token}}",
-			"queryParams": [
-				{
-					"key": "token",
-					"value": "{{token}}",
-					"equals": true,
-					"description": "",
-					"enabled": true
-				}
-			],
-			"preRequestScript": "",
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
-			"data": null,
-			"dataMode": "params",
-			"version": 2,
-			"tests": "",
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1528826930266,
-			"name": "https://septest.colonseguros.com.ar/oauth2/oauth/check_token",
-			"description": "",
-			"collectionId": "11f8efb2-b145-4581-f64d-9590c983110b",
-			"responses": []
+			},
+			"response": []
 		},
 		{
-			"id": "aaae90aa-bb35-aaeb-484c-5aa30b6493f2",
-			"headers": "Authorization: Basic YnJvd3NlckNsaWVudElkUGFzc3dvcmQ6c2VjcmV0\nContent-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "Basic YnJvd3NlckNsaWVudElkUGFzc3dvcmQ6c2VjcmV0",
-					"description": "",
-					"enabled": true
-				},
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
+			"name": "https://septest.colonseguros.com.ar/oauth2/oauth/check_token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YnJvd3NlckNsaWVudElkUGFzc3dvcmQ6c2VjcmV0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://septest.colonseguros.com.ar/oauth2/oauth/check_token?token={{token}}",
+					"protocol": "https",
+					"host": [
+						"septest",
+						"colonseguros",
+						"com",
+						"ar"
+					],
+					"path": [
+						"oauth2",
+						"oauth",
+						"check_token"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{token}}"
+						}
+					]
 				}
-			],
-			"url": "https://septest.colonseguros.com.ar/ov_consultas/api/login/token",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "POST",
-			"collectionId": "11f8efb2-b145-4581-f64d-9590c983110b",
-			"data": [],
-			"dataMode": "raw",
-			"name": "https://septest.colonseguros.com.ar/ov_consultas/api/login/token",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1528810847386,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"rawModeData": "{\n\"username\":\"colon\",\n\"password\":\"sipcolon123\"\n}"
+			},
+			"response": []
 		}
 	]
 }

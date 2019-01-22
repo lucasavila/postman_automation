@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#WORKSPACE="/home/colon/tests"
-WORKSPACE="/home/lucas/proyectos/colon/postman/tests"
+WORKSPACE="/home/colon/src/tests"
+#WORKSPACE="/home/lucas/proyectos/colon/postman/tests"
 
 cd $WORKSPACE
 

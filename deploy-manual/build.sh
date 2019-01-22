@@ -1,11 +1,11 @@
 #!/bin/bash
 
-rm -rf token/node_modules/
-rm -rf node_modules/
+rm -rf src/token/node_modules/
+rm -rf src/node_modules/
 
 cp -R ../tests/ src/
 
-echo -n | docker login -u colondocker -p Pnflqfsf01! registry.dev.redbee.io
+yes | docker login -u deploycolon -p "#saasdockerhub26566" saascolon
 
-docker build -t registry.dev.redbee.io/postman_automation:latest .
-docker push registry.dev.redbee.io/postman_automation:latest
+docker build -t saascolon/postman_automation:latest .
+docker push saascolon/postman_automation:latest
